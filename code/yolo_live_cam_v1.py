@@ -26,7 +26,7 @@ class ObjectDetection:
 
     def load_model(self):
        
-        model = YOLO("C:/dev/github/explore/webcam/model/v1.pt")  # load a customed YOLOv8n model
+        model = YOLO("C:/dev/github/Playdata-Final-Project/model/v1.pt")  # load a customed YOLOv8n model
 
         model.fuse()
     
