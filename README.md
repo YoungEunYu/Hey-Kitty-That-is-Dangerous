@@ -10,8 +10,10 @@
 2. model(customed yolov8n weight)
     - v1 : `stove, display, dresser, cat, closet, sofa` detection(4,444 Images)
     - v2 : `stove, cat` detection(3,091 Images)
+    - v3 : `stove, cat` detection(6,097 Images)
 
 3. Problem
     - v1 : `stove, display` class is confused
            `dresser, closet` class is unbalanced than other classes(Not enough images)
-    - v2 : 
+    - v2 : `stove` class data is not enough
+    - v3 : gas stove image is confused with steel dishes → train with induction(black & 2 plates)
