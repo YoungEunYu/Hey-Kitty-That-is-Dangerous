@@ -18,4 +18,4 @@
            `dresser, closet` class is unbalanced than other classes(Not enough images)
     - v2 : `stove` class data is not enough
     - v3 : gas stove image is confused with steel dishes → train with induction(black & 2 plates)
-    - v4 : Model is confused with rear and side view of cats → train side and rear view of cats
+    - v4 : Model is confused with rear and side view of cats → train side and rear view of cats(1,873 cat, 3,542 stove)
