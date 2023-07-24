@@ -42,8 +42,11 @@ def upload_file():
 @app.route('/logout')
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('pages/index.html')
 
+@app.route("/header")
+def header():
+    return render_template('header.html')
 
 @app.route("/oauth")
 def oauth_api():
