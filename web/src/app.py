@@ -1,7 +1,8 @@
 """
 Flask Kakao OAuth Application Sample
 """
-from flask import Flask, render_template, request, jsonify, make_response
+from flask import Flask, render_template, request, jsonify, make_response, url_for
+import os
 from flask_jwt_extended import (
     JWTManager, create_access_token, 
     get_jwt_identity, jwt_required,
@@ -26,16 +27,70 @@ app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'  # 업로드된 파일이 저장�
 photos = UploadSet('photos', IMAGES)     ########추가한 부분
 configure_uploads(app, photos)
 
-@app.route('/fileupload', methods=['GET', 'POST']) ########추가한 부분
+# 업로드 세트 설정
+photos = UploadSet('photos', IMAGES)
+app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'
+configure_uploads(app, photos)
+
+@app.route('/fileupload', methods=['POST'])
 def upload_file():
-    if request.method == 'POST' and 'photo' in request.files:
-        file = request.files['photo']
+    files = request.files.getlist('photo')
+
+    if len(files) == 0:
+        return '선택된 이미지 파일이 없습니다.'
+
+    success_count = 0
+    for file in files:
+        if file.filename == '':
+            continue
         if file and file.filename.endswith(photos.extensions):
             filename = photos.save(file)
-            return f'File {filename} uploaded successfully!'
-        else:
-            return 'Invalid file format. Please upload an image.'
-    return render_template('fileupload.html')
+            success_count += 1
+    if success_count > 0:
+        return f'{success_count}개의 파일이 성공적으로 업로드되었습니다!'
+    else:
+        return '잘못된 파일 형식입니다. 이미지 파일을 업로드하세요.'
+    
+
+@app.route('/delete', methods=['POST'])
+def delete_file():
+    filename = request.form.get('filename')
+
+    if filename:
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        try:
+            os.remove(file_path)
+            return jsonify({'message': f'File {filename} deleted successfully!'})
+        except FileNotFoundError:
+            return jsonify({'error': 'File not found.'}), 404
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    else:
+        return jsonify({'error': 'Filename not provided.'}), 400
+    
+    # 파일 삭제를 위한 엔드포인트 추가
+#@app.route('/delete', methods=['POST'])
+#def delete_file():
+#    filename = request.form.get('filename')
+
+#    if filename:
+#        try:
+#            photos.delete(filename)  # 업로드된 파일 삭제
+#            return jsonify({'message': f'File {filename} deleted successfully!'})
+#        except FileNotFoundError:
+#            return jsonify({'error': 'File not found.'}), 404
+#        except Exception as e:
+#            return jsonify({'error': str(e)}), 500
+#    else:
+#        return jsonify({'error': 'Filename not provided.'}), 400
+
+@app.route('/')
+def index():
+    return render_template('photo_upload.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    
 
 # 사용자는 "/" Route를 통해 먼저 서비스 페이지에 접근한 후, 
 # 아래와 같은 카카오 로그인 버튼을 만나게 됨

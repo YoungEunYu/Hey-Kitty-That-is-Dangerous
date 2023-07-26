@@ -72,7 +72,7 @@
     justify-content: center;
 }
 .image-button {
-    background: url("./plus_button.svg");
+    background: url("../.././static/image/plus_button.svg");
     background-size: 100% 100%;
     width: 200px;
     height: 200px;
@@ -94,7 +94,7 @@
     height: 224.54px;
 }
 #greeting-icon {
-    background: url("./icon.png");
+    background: url("../.././static/image/icon.png");
     background-size: cover;
     margin-bottom: 20px;
     width: 73px;
@@ -118,7 +118,12 @@
                 <!--profile-->
             </button>
             <div>
-                <h1 class = "h1" id="a">내가 등록한 위험물 목록</h1>
+                [{% extends 'header.html' %}
+                {% block content %}
+                
+                    <h1>내가 등록한 위험물 목록</h1>
+
+                {% endblock %}
             </div>
         </div>
         <br>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload and Delete</title>
+</head>
+<body>
+    <h1>이미지 업로드</h1>
+    <form id="uploadForm" method="POST" enctype="multipart/form-data">
+        <input type="file" name="photo" accept="image/*">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>업로드된 이미지 목록</h2>
+    <ul id="imageList">
+        <!-- 업로드된 이미지 목록이 여기에 표시됩니다. -->
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 이미지 업로드 폼의 제출 이벤트 처리
+            $('#uploadForm').submit(function(event) {
+                event.preventDefault(); // 기본 제출 동작 방지
+
+                var formData = new FormData($(this)[0]);
+
+                // AJAX를 사용하여 이미지 업로드 요청 보내기
+                $.ajax({
+                    url: '/fileupload',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(data) {
+                        alert(data.message);
+                        showImageList();
+                    },
+                    error: function(error) {
+                        console.error('이미지 업로드 중 오류 발생:', error);
+                    }
+                });
+            });
+
+            // 이미지 목록을 보여주는 함수
+            function showImageList() {
+                $.get('/list', function(data) {
+                    var imageList = $('#imageList');
+                    imageList.empty(); // 기존 목록 초기화
+
+                    // 서버에서 받은 파일 목록을 리스트로 표시
+                    data.files.forEach(function(filename) {
+                        var listItem = $('<li>').text(filename);
+
+                        var deleteButton = $('<button>').text('삭제');
+                        deleteButton.click(function() {
+                            deleteImage(filename);
+                        });
+
+                        listItem.append(deleteButton);
+                        imageList.append(listItem);
+                    });
+                });
+            }
+
+            // 이미지 삭제 함수
+            function deleteImage(filename) {
+                $.ajax({
+                    url: '/delete',
+                    type: 'POST',
+                    data: { filename: filename },
+                    success: function(data) {
+                        alert(data.message);
+                        showImageList();
+                    },
+                    error: function(error) {
+                        console.error('이미지 삭제 중 오류 발생:', error);
+                    }
+                });
+            }
+
+            // 페이지 로드 시 이미지 목록 보여주기
+            showImageList();
+        });
+    </script>
+</body>
+</html>
