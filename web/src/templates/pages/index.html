@@ -1,22 +1,24 @@
 {% extends 'header.html' %}
 {% block content %}
-
     <style>
         body,html {
             height: 100%;
             margin: 0;
         }
-        /* header{
-            height: 54px;
+        header{
+            /* height: 54px;
             position: relative;
-            z-index: 2;
-        } */
+            z-index: 2; */
+            width: 100%;
+            position: relative;
+        }
         .container {
             display: flex;
             flex-direction: row;
-            overflow: hidden;
-            margin-top: -54px;
+            /* overflow: hidden; */
+            /* margin-top: -54px; */
             height: 20%;
+            font-family: "Pretendard-Medium"
         }
         .left {
             display: flex;
@@ -31,7 +33,7 @@
             justify-content: center;
             width: 50%;
         }
-        /* nav>ul {
+        nav>ul {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -39,7 +41,7 @@
         nav>ul>li {
             display: flex;
             flex-direction: column; 
-        }*/
+        }
         #kakao {
             background-color: #FEE500;
             padding: 35px 87px;
@@ -94,18 +96,18 @@
             letter-spacing: 0.07px;
             word-wrap: break-word;
         }
-        a:link, a:visited {
+        a=#Question:link, #Question:visited {
             color: #0F62FE;
         }
-        a:hover, a:active {
+        #Question:hover, #Question:active {
             color: #062661;
             font-weight: bold;
         } 
-        a {
+        #Question {
             font: inherit;
             text-decoration: None;
         }
-        .loading_circle {
+        /* .loading_circle {
             position: relative;
             width: 32px;
             height: 32px;
@@ -138,8 +140,8 @@
             z-index: 10;
         }
         .display_none {
-            display: none !important;
-        }
+            display: none !important; 
+        }*/
     </style>
 </head>
 
@@ -162,7 +164,7 @@
             <button id="kakao">
                 <img id="kakao-icon" src="{{url_for('static', filename='image/kakao icon.svg')}}" alt="">
                 카카오 1초 로그인/회원가입</button>
-            <span>로그인이 안 되실 경우 <a href="#">여기</a>로 문의주세요</span>
+            <span id="Question">로그인이 안 되실 경우 <a href="#">여기</a>로 문의주세요</span>
         </div>
         <div class="right">
             <h1 id="title">
@@ -180,9 +182,9 @@
         </div>
     </div>
     
-	<div id="loading" class="loading display_none">
+	<!-- <div id="loading" class="loading display_none">
 		<div class="loading_circle"></div>
-	</div>
+	</div> -->
 
 <script src='/static/main.js'></script>
 
