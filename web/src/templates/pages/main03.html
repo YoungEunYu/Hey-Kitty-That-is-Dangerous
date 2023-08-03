@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
+{% extends 'header.html' %}
+{% block content %}
 
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--  <meta name="theme-color" content="#000000" />-->
-  <title>MAIN</title>
+  <!-- <title>MAIN</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pretendard%3A500%2C600%2C700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
-  <link rel="stylesheet" href="./styles/main03.css"/>
+  <link rel="stylesheet" href="./styles/main03.css"/>  -->
+  
   <style>
     html {
       font-size:62.5%;
@@ -41,12 +36,12 @@
       box-sizing: border-box;
       padding: 0rem 5.623rem 0rem 1rem;
       width: 100%;
-      height: 18.6rem;
+      height: 54px;
       display: flex;
       align-items: center;
       flex-shrink: 0;
     }
-    .main .header .item--cUq {
+    /* .main .header .item--cUq {
       margin: 0rem 67.3rem 13.5rem 0rem;
       font-size: 3.6rem;
       font-weight: 500;
@@ -56,9 +51,9 @@
       font-family: Pretendard, 'Source Sans Pro';
       white-space: nowrap;
       flex-shrink: 0;
-    }
+    } */
 
-    .main .header .logo {
+    /* .main .header .logo {
       margin: 67px 49px 843px 843px;
       width: 23.4rem;
       height: 2.8rem;
@@ -66,7 +61,7 @@
       vertical-align: top;
       flex-shrink: 0;
       align-content: center
-    }
+    } */
 
 
     .main .header .profile {
@@ -142,7 +137,7 @@
     .main .contents_frame .left_contents_frame .copyright {
       margin-left: 8rem;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 12px;
       font-weight: 600;
       line-height: 1;
       letter-spacing: 0.05rem;
@@ -151,6 +146,7 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
+
     .main .contents_frame .right_contents_frame {
       width: 39.1rem;
       height: 100%;
@@ -227,67 +223,31 @@
       font-family: Pretendard, 'Source Sans Pro';
       white-space: nowrap;
       flex-shrink: 0;
-    }
+    }  
   </style>
-</head>
-<body>
+
 <div class="main">
   <div class="header">
-    <img class="logo" src="./assets/-aPb.png"/>
-    <img class="profile" src="./assets/icon-user-mono.svg"/>
+
   </div>
   <div class="contents_frame">
     <div class="left_contents_frame">
       <div class="main_messege">등록한 위험물이 없어요! 한개 이상의 위험물을 등록해 주세요!</div>
-      <img class="video_area" src="./assets/placeholder-video-TeH.png"/>
+      <img class="video_area" src="{{url_for('static', filename='image/placeholder-video.png')}}"/>
       <p class="copyrightc">Copyright(c) 2023. H.AI. All rights reserved.</p>
     </div>
     <div class="right_contents_frame">
       <div class="right_contents_title">
         <div class="recordTxt">Record</div>
-		  
-		<a href="https://google.com">
-        <img class="icon-plus-circle-mono-5x5" src="./assets/icon-plus-circle-mono.svg"/></a>
-		  
-		  
+
+		<a href="http://127.0.0.1:5000/Dangerous_List">
+        <img class="icon-plus-circle-mono-5x5" src="{{url_for('static', filename='image/plus_button.svg')}}"></a>
       </div>
-		<div style ="overflow:auto; width:438px; height:83rem;" class="scroll_area">
-			
-      <div class="record_content_box">
-        <img class="mask-group-wjP" src="./assets/mask-group-QjK.png"/>
-        <div class="detectTime">23.07.10 월  17:28시</div>
-        <div class="auto-group-vzfb-Bdj">
-          <div class="item--iNm">인덕dddd</div>
-        </div>
-      </div>
-		      <div class="record_content_box">
-        <img class="mask-group-wjP" src="./assets/mask-group-QjK.png"/>
-        <div class="detectTime">23.07.10 월  17:28시</div>
-        <div class="auto-group-vzfb-Bdj">
-          <div class="item--iNm">인덕션에 접촉했어요!</div>
-        </div>
-      </div>
-			
-		<div class="record_content_box">
-        <img class="mask-group-wjP" src="./assets/mask-group-QjK.png"/>
-        <div class="detectTime">23.07.10 월  17:28시</div>
-        <div class="auto-group-vzfb-Bdj">
-          <div class="item--iNm">인덕션에 접촉했어요!</div>
-        </div>
-      </div>
-			
-		<div class="record_content_box">
-        <img class="mask-group-wjP" src="./assets/mask-group-QjK.png"/>
-        <div class="detectTime">23.07.10 월  17:28시</div>
-        <div class="auto-group-vzfb-Bdj">
-          <div class="item--iNm">인덕션에 접촉했어요!</div>
-        </div>
-      </div>
-			
-			
-    </div>
+
+      {% include 'detectlog_scroll.html' %}
+      
   </div>
 </div>
 	</div>
-</body>
-</html>
+
+{% endblock %}
