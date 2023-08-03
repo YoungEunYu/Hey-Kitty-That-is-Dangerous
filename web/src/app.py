@@ -48,6 +48,14 @@ def index():
 def intro():
     return render_template('pages/intro.html')
 
+@app.route("/main03")
+def main03():
+    return render_template('pages/main03.html')
+
+@app.route("/Dangerous_List")
+def Dangerous_List():
+    return render_template('pages/Dangerous_List.html')
+
 @app.route("/oauth")
 def oauth_api():
     
