@@ -1,43 +1,34 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>야옹이 안전지킴이</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pretendard%3A500%2C600%2C700"/>
-    <script>
-        function openPopup() {
-        window.open("photo_upload.html", "팝업", "width=1000,height=1000");
-        }
-    </script>
-    <!--여기-->
-</head>
+{% extends 'header.html' %}
+{% block content %}
+<script>
+    function openPopup() {
+    window.open("/photo_upload", "팝업", "width=1000,height=1000");
+    src="{{url_for('static', filename='image/plus_button.svg')}}"
+    }
+</script>
+
 <style>
     *{
         font-family: Pretendard, 'Source Sans Pro' !important;
         line-height: 1.3500000146;
 }
 .flex-container {
-            display: flex;
+            /* display: flex; */
             align-items: center;
-            margin-top: 81px;
+            margin-top: 150px;
 }
-.back-button {
-    border: none;
-    background-color: #ffffff;
-    /* display: flex;; */
-    /* justify-items: flex-start; */
-}
-#h1 {
-    text-align: center;
-    font-size: 38px;
+
+.h1 {
+    /* text-align: center;
+    font-size: 35px;
     font-weight: 600;
     align-items: center;
     justify-items: center;
+    color: #2E3B4C;
+    align-items: center; */
 }
 .card-box {
-    border-radius: 10px 0 0 10px;
+    border-radius: 37px 37px 37px 37px;
     padding: 20px;
     width: 375.21px; 
     height: 371.42px; 
@@ -54,7 +45,6 @@
     justify-content: center;
     font-size: 28px;
     color: #121212;
-    background-color: #ffffff;
     font-family: Pretendard, 'Source Sans Pro';
     font-weight: 400;
 }
@@ -72,7 +62,7 @@
     justify-content: center;
 }
 .image-button {
-    background: url("./plus_button.svg");
+    background: url("../.././static/image/plus_button.svg");
     background-size: 100% 100%;
     width: 200px;
     height: 200px;
@@ -94,7 +84,7 @@
     height: 224.54px;
 }
 #greeting-icon {
-    background: url("./icon.png");
+    background: url("../.././static/image/icon.png");
     background-size: cover;
     margin-bottom: 20px;
     width: 73px;
@@ -108,30 +98,17 @@
 }
 </style>
 
-<body>
-    <div class="container">
+<!-- <body> -->
+    <!-- <div class="container"> -->
         <div class="flex-container">
-            <button class="back-button">
-                <a href="http://127.0.0.1:5500/randing_page.html">
-                    <img src="icon-arrow-left-small-mono.svg">
-                </a>
-                <!--profile-->
-            </button>
-            <div>
-                <h1 class = "h1" id="a">내가 등록한 위험물 목록</h1>
-            </div>
+                <h1 style="text-align: center; color: #2E3B4C; font-size: 36px; font-weight: 600; line-height: 38px;" align="center" id="a">내가 등록한 위험물 목록</h1>
         </div>
-        <br>
-        <br>
         <div >
             <div>
-                <p style="text-align: center; font-size: 21px; font-weight: 400; margin-top: 25px;"><b>고양이가 인덕션에 접촉했을 때 알림을 드립니다.<br>
+                <p style="text-align: center; line-height: 31.71px; color: #8B95A1; font-size: 20px; font-weight: 300;"><b>고양이가 인덕션에 접촉했을 때 알림을 드립니다.<br>
                     본인 집의 인덕션 사진을 업로드하셔서 알림을 받아보세요!</b></p>
+                    
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <div class="card-section"> <!--style css 파일로 옮기기-->
@@ -158,9 +135,9 @@
             <br>
             <br>
         </div>
-    </div>
-</body>
-</html>
+    <!-- </div> -->
+<!-- </body>
+</html> -->
 
 <!--<!DOCTYPE html>
 <html>
@@ -186,3 +163,6 @@
     인덕션 박스 + 눌렀을 때 업로드 팝업창 뜨고 업로드 끝나면 이미지 업로드 되기
     파일 다중 업로드와 삭제, 뒤로가기 버튼 구현
     반응형-->
+
+
+{% endblock %}
