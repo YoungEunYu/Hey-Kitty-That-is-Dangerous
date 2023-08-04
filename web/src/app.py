@@ -1,7 +1,7 @@
 """
 Flask Kakao OAuth Application Sample
 """
-from flask import Flask, render_template, request, jsonify, make_response, url_for
+from flask import Flask, render_template, request, jsonify, make_response, Response
 import os
 from flask_jwt_extended import (
     JWTManager, create_access_token, 
@@ -14,6 +14,8 @@ from config import CLIENT_ID, REDIRECT_URI
 from controller import Oauth
 from model import UserModel, UserData
 from flask_uploads import UploadSet, configure_uploads, IMAGES
+
+from infer import *
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = "I'M IML."
@@ -28,6 +30,29 @@ jwt = JWTManager(app)
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'
 configure_uploads(app, photos)
+
+def generate_frames_web():
+    """
+    Generator function that yields frames with object detection results from webcam.
+
+    Yields:
+        bytes: Frames with object detection results in JPEG format.
+    """
+    yolo_output = run_yolo(source=0, web_app=True)
+    for detection_ in yolo_output:
+        ref, buffer = cv2.imencode('.jpg', detection_)
+        frame = buffer.tobytes()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+def get_recent_image(folder):
+    img_files = [f for f in os.listdir(folder) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    if img_files:
+        img_files.sort(key=lambda x: os.path.getmtime(os.path.join(folder, x)), reverse=True)
+        return img_files[0]
+    else:
+        return None
+
 
 @app.route('/fileupload', methods=['POST'])
 def upload_file():
@@ -208,6 +233,20 @@ def oauth_userinfo_api():
     result = Oauth().userinfo("Bearer " + access_token)
     return jsonify(result)
 
+@app.route('/webapp')
+def webapp():
+    """
+    Streams the video with object detection results from the webcam.
+    """
+    return Response(generate_frames_web(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+# Route to provide a list of images in JSON format
+@app.route('/get_images')
+def get_recent_image_path():
+    # folder = 'static'  # Replace with the actual path to your image folder
+    folder = 'web/src/static/warnings'
+    recent_image = get_recent_image(folder)
+    return jsonify(recent_image)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=False)

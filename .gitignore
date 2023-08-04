@@ -136,4 +136,8 @@ src/config.py
 config.py
 
 src/db.json
+
 src/static/fonts/.otf 폰트
+
+web/src/static/warnings
+
