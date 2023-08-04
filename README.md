@@ -1,14 +1,3 @@
-# 0. Project Name : Playdata-Final-Project
-
-# 0-1. Description(프로젝트 설명)
-
-# 1. Objective(목표)
-
-# 2. Branch
-
-
-
-
 # 0. Project Name : 야옹아 거기는 위험해!
 # 1. Description(프로젝트 설명)
 # 2. Objective(목표)

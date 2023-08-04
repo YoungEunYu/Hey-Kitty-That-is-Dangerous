@@ -14,6 +14,7 @@ from config import CLIENT_ID, REDIRECT_URI
 from controller import Oauth
 from model import UserModel, UserData
 from flask_uploads import UploadSet, configure_uploads, IMAGES
+
 from infer import *
 
 app = Flask(__name__)
