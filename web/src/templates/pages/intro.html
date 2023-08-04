@@ -1,0 +1,65 @@
+{% extends 'header.html' %}
+{% block content %}
+    <style>
+        body,html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            height: 20%
+        }
+        /* header{
+            height: 54px;
+            position: relative;
+            z-index: 2;
+        } */
+        /* .container {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            margin-top: -54px;
+            text-align: center;
+        } */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            font-family: "Pretendard-Medium"
+        }
+        #title > svg {
+            margin-bottom: 65.3px;
+            margin-top: 153px;
+        }
+        .content {
+            color: #121212;
+            font-size: 23px;
+            font-weight: 500;
+            line-height: calc(24.61px + 15px);
+            letter-spacing: 0.12px;
+            word-wrap: break-word;
+            text-align: center;
+            padding-top: 66px;
+            font-family: "Pretendard-Medium"
+        }
+    </style>
+
+    <div class="container">
+        <div class="intro">
+            <h1 id="title">
+                <img src="{{url_for('static', filename='image/title.svg')}}" alt="">                  
+            </h1>
+            <img src="./../static/image/cat.png" alt="고양이 이미지입니다" width="128" height="auto">
+            <div class="content">야옹이 안전지킴이는 집을 비운 집사를 대신해서 <br>
+                고양이가 위험한 곳에 올라가거나 닿지는 않았는지 감지해 알림을 주는 서비스입니다. <br><br>
+                
+                현재 베타 버전으로 인덕션까지 학습이 가능합니다. <br>
+                집에 있는 인덕션의 사진을 올려주시고 웹캠이나 펫캠을 연결하면 <br>
+                AI가 자동으로 접촉 여부를 인식해 알림을 보내줘요. <br><br>
+                
+                향후 고양이가 접근하면 안되는 여러 위험물들을 추가할 예정이니 많이 응원해 주세요!</div>
+        </div>
+    </div>
+
+
+{% endblock %}
