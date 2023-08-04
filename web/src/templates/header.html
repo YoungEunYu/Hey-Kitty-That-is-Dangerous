@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개페이지</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="http://127.0.0.1:5000/main03">
+                            <img src="{{url_for('static', filename='image/Logo_left.svg')}}" alt="로고" id="Logo_l">
+                        </a>
+                    </li>
+                    <li>
+
+                        <div class="hero">
+                            <nav>
+                                <img id="profile" src="{{url_for('static', filename='image/profile.svg')}}" alt="프로필" onclick="toggleMenu()">
+
+                                <!-- 
+                                <img src="web/src/static/image/profile.svg" class= "user-pic" onclick="toggleMenu()"> -->
+
+                                <div class="sub-menu-wrap" id="subMenu">
+                                    <div class="sub-menu">
+                                        <div class="user-info">
+                                            <h3 id="username">PLAYDATA</h3>
+                                            <h4 id="email">playdata_97@gmail.com</h4>
+                                        </div>
+                                        <hr>
+                                        <a href="http://127.0.0.1:5000/intro" class="sub-menu-link">
+                                            <img src="{{url_for('static', filename='image/vector.svg')}}">
+                                            <p>서비스 소개</p>
+                                        </a>
+                                        <a href="#" class="sub-menu-link">
+                                            <img src="{{url_for('static', filename='image/headphone.svg')}}">
+                                            <!-- <img src="web/src/static/image/headphone.svg"> -->
+                                            <p>관리자 문의</p>
+                                        </a>
+                                        <a href="http://127.0.0.1:5000/logout" class="sub-menu-link" id="logout">
+                                            <img src="{{url_for('static', filename='image/out.svg')}}">
+                                            <!-- <img src="web/src/static/image/out.svg"> -->
+                                            <p>로그아웃</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+
+
+    </div>
+    </header>
+
+    <div class="primary_container">
+        {# 다른 html 코드들을 아래 공간에 넣으면 된다!!!!
+        자기 html파일에 {% extends 'header.html'%} 작성해서 넣으면 이 header가 들어옴!!! #}
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }</script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>
