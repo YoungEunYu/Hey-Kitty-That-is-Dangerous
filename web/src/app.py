@@ -51,13 +51,15 @@ def upload_file():
     else:
         return '잘못된 파일 형식입니다. 이미지 파일을 업로드하세요.'
     
+app.config['UPLOAD_FOLDER'] = 'uploads'
 
 @app.route('/delete', methods=['POST'])
 def delete_file():
-    filename = request.form.get('filename')
+    data = request.get_json()
+    filename = data.get('filename')
 
     if filename:
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'],"127.0.0.1:port number" ,filename) ### 로그인 유지에 대한 상태값 -> 고유값 파라미터로 가져와서 폴더명으로 활용(서비스로서) -> IP값 그냥 받기(현재)
         try:
             os.remove(file_path)
             return jsonify({'message': f'File {filename} deleted successfully!'})
