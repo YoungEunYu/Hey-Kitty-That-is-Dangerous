@@ -1,14 +1,14 @@
 const scrollArea = document.getElementById("scroll_area");
 let warning_files = [];
 function updateImages() {
-    $.get('/get_images', function(data) {
+    $.get('/get_images', function (data) {
         if (check_changed_file(warning_files, data)) {
             scrollArea.innerHTML = null;
             warning_files = manage_files(warning_files, data);
             warning_files.forEach((file) => {
                 let divRecordContent = document.createElement('div');
                 divRecordContent.classList.add("record_content_box");
-                
+
                 let divDetectTime = document.createElement('div');
                 divDetectTime.classList.add("detectTime");
                 divDetectTime.innerText = formatDate(file.slice(10, 24));
@@ -25,7 +25,7 @@ function updateImages() {
                 imgElement.classList.add('recent-images');
                 imgElement.alt = "Most Recent Captured Image";
                 imgElement.src = '/static/warnings/' + file;
-                imgElement.style = "width:389.766px;";
+                imgElement.style = "width:10%;";
 
                 divRecordContent.appendChild(imgElement);
                 divRecordContent.appendChild(divDetectTime);
@@ -45,20 +45,20 @@ function formatDate(inputDate) {
     const day = parseInt(inputDate.slice(6, 8));
     const hours = parseInt(inputDate.slice(8, 10));
     const minutes = parseInt(inputDate.slice(10, 12));
-  
+
     const dateObject = new Date(year, month - 1, day, hours, minutes);
-  
+
     // Format the date for desired output: '23.07.10 월 17:28시'
     const formattedDate = `${dateObject.getFullYear().toString().slice(2)}.${String(dateObject.getMonth() + 1).padStart(2, '0')}.${String(dateObject.getDate()).padStart(2, '0')} 월 ${String(dateObject.getHours()).padStart(2, '0')}:${String(dateObject.getMinutes()).padStart(2, '0')}시`;
-  
+
     return formattedDate;
-  }
+}
 
 function manage_files(files, value) {
     if (files.length >= 3) {
         files = files.slice(0, files.length - 1);
     }
-    return [value, ...files]; 
+    return [value, ...files];
 }
 
 function check_changed_file(files, value) {
