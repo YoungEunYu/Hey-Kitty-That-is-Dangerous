@@ -8,6 +8,7 @@ __pycache__/
 db.json
 .DS_Store
 **/.DS_Store
+
 # Distribution / packaging
 .Python
 build/
@@ -130,6 +131,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 src/config.py
+**/config.py
+./web/src/config.py
 
 *.otf
 *.woff
@@ -138,3 +141,9 @@ config.py
 
 src/db.json
 src/static/fonts/.otf 폰트
+**/db.json
+db.json
+
+src/static/fonts/.otf 폰트
+
+web/src/static/warnings

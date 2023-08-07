@@ -248,4 +248,4 @@ def get_recent_image_path():
     return jsonify(recent_image)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0', debug=False)
