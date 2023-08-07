@@ -1,7 +1,7 @@
 """
 Flask Kakao OAuth Application Sample
 """
-from flask import Flask, render_template, request, jsonify, make_response, Response
+from flask import Flask, render_template, request, jsonify, make_response, url_for
 import os
 from flask_jwt_extended import (
     JWTManager, create_access_token, 
@@ -14,7 +14,6 @@ from config import CLIENT_ID, REDIRECT_URI
 from controller import Oauth
 from model import UserModel, UserData
 from flask_uploads import UploadSet, configure_uploads, IMAGES
-from infer import *
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = "I'M IML."
@@ -24,34 +23,14 @@ app.config['JWT_COOKIE_CSRF_PROTECT'] = True
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = 30
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = 100
 jwt = JWTManager(app)
+app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'  # 업로드된 파일이 저장될 디렉토리 경로
+photos = UploadSet('photos', IMAGES)     ########추가한 부분
+configure_uploads(app, photos)
 
 # 업로드 세트 설정
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'
 configure_uploads(app, photos)
-
-def generate_frames_web():
-    """
-    Generator function that yields frames with object detection results from webcam.
-
-    Yields:
-        bytes: Frames with object detection results in JPEG format.
-    """
-    yolo_output = run_yolo(source=0, web_app=True)
-    for detection_ in yolo_output:
-        ref, buffer = cv2.imencode('.jpg', detection_)
-        frame = buffer.tobytes()
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
-def get_recent_image(folder):
-    img_files = [f for f in os.listdir(folder) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-    if img_files:
-        img_files.sort(key=lambda x: os.path.getmtime(os.path.join(folder, x)), reverse=True)
-        return img_files[0]
-    else:
-        return None
-
 
 @app.route('/fileupload', methods=['POST'])
 def upload_file():
@@ -68,7 +47,7 @@ def upload_file():
             filename = photos.save(file)
             success_count += 1
     if success_count > 0:
-        return f'{success_count}개의 파일을 성공적으로 업로드되었습니다!'
+        return f'{success_count}개의 파일이 성공적으로 업로드되었습니다!'
     else:
         return '잘못된 파일 형식입니다. 이미지 파일을 업로드하세요.'
     
@@ -107,9 +86,12 @@ def delete_file():
 #    else:
 #        return jsonify({'error': 'Filename not provided.'}), 400
 
-@app.route('/photo_upload')
-def photo_upload():
-    return render_template('pages/photo_upload.html')
+@app.route('/')
+def index():
+    return render_template('photo_upload.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
     
 
 # 사용자는 "/" Route를 통해 먼저 서비스 페이지에 접근한 후, 
@@ -122,14 +104,6 @@ def index():
 @app.route("/intro")
 def intro():
     return render_template('pages/intro.html')
-
-@app.route("/main03")
-def main03():
-    return render_template('pages/main03.html')
-
-@app.route("/Dangerous_List")
-def dangerous_list():
-    return render_template('pages/Dangerous_List.html')
 
 @app.route("/oauth")
 def oauth_api():
@@ -151,7 +125,7 @@ def oauth_api():
     UserModel().upsert_user(user)
 
     # 사용자 식별 id를 바탕으로 서비스 전용 access_token, refresh_token 발급
-    resp = make_response(render_template('pages/index.html'))
+    resp = make_response(render_template('index.html'))
     access_token = create_access_token(identity=user.id)
     refresh_token = create_refresh_token(identity=user.id)
     resp.set_cookie("logined", "true")
@@ -232,20 +206,6 @@ def oauth_userinfo_api():
     result = Oauth().userinfo("Bearer " + access_token)
     return jsonify(result)
 
-@app.route('/webapp')
-def webapp():
-    """
-    Streams the video with object detection results from the webcam.
-    """
-    return Response(generate_frames_web(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-# Route to provide a list of images in JSON format
-@app.route('/get_images')
-def get_recent_image_path():
-    # folder = 'static'  # Replace with the actual path to your image folder
-    folder = 'web/src/static/warnings'
-    recent_image = get_recent_image(folder)
-    return jsonify(recent_image)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

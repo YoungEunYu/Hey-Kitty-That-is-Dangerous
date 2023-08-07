@@ -198,7 +198,6 @@ nav {
   src: url("./../fonts/Pretendard-SemiBold.otf") format("opentype");
   font-weight: 400;
 }
-<<<<<<< HEAD
 
 .primary_container {
   overflow-y: scroll;
@@ -207,5 +206,3 @@ nav {
   width: 90%;
   /* overflow-x: hidden; */
 }
-=======
->>>>>>> f7067bc (헤더 통합 및 수정)

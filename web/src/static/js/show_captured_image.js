@@ -24,7 +24,7 @@ function updateImages() {
                 imgElement.classList.add('recent-images');
                 imgElement.alt = "Most Recent Captured Image";
                 imgElement.src = '/static/warnings/' + file;
-                imgElement.style = "width:10%;";
+                imgElement.style = "width:100%;";
 
                 divRecordContent.appendChild(imgElement);
                 divRecordContent.appendChild(divDetectTime);
