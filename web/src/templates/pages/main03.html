@@ -232,16 +232,35 @@
   </div>
   <div class="contents_frame">
     <div class="left_contents_frame">
+<<<<<<< Updated upstream
       <div class="main_messege">등록한 위험물이 없어요! 한개 이상의 위험물을 등록해 주세요!</div>
       <img class="video_area" src="{{url_for('static', filename='image/placeholder-video.png')}}"/>
+=======
+      <div class="main_messege"> 위험물 등록이 완료되었어요! 고양이가 인덕션에 올라가면 알림을 드립니다</div>
+        <section>
+          <div class="col-sm">
+            <img src="{{ url_for('webapp') }}" alt="Upload video" width="100%" height="auto" autoplay="">
+          </div>
+        </section>
+>>>>>>> Stashed changes
       <p class="copyrightc">Copyright(c) 2023. H.AI. All rights reserved.</p>
     </div>
     <div class="right_contents_frame">
       <div class="right_contents_title">
         <div class="recordTxt">Record</div>
 
+<<<<<<< Updated upstream
 		<a href="http://127.0.0.1:5000/Dangerous_List">
         <img class="icon-plus-circle-mono-5x5" src="{{url_for('static', filename='image/plus_button.svg')}}"></a>
+=======
+        <a href="http://127.0.0.1:5000/Dangerous_List">
+          <img class="icon-plus-circle-mono-5x5" src="{{url_for('static', filename='image/plus_button.svg')}}"></a>
+      </div>
+      <div style="overflow:auto; width:flex; height:auto;" class="scroll_area" id="scroll_area"">
+        <div id="image-container">
+          <script src="{{ url_for('static', filename='js/show_captured_image.js')}}"></script>
+        </div>
+>>>>>>> Stashed changes
       </div>
 
       {% include 'detectlog_scroll.html' %}
