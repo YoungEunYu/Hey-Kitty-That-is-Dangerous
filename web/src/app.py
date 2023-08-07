@@ -10,7 +10,7 @@ from flask_jwt_extended import (
     unset_jwt_cookies, create_refresh_token,
     jwt_refresh_token_required,
 )
-from config import CLIENT_ID, REDIRECT_URI
+from web.src.config import CLIENT_ID, REDIRECT_URI
 from controller import Oauth
 from model import UserModel, UserData
 from flask_uploads import UploadSet, configure_uploads, IMAGES
