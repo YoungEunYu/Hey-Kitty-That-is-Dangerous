@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야옹이 안전지킴이</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600%2C700"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pretendard%3A500%2C600%2C700"/>
+    <script>
+        function openPopup() {
+        window.open("photo_upload.html", "팝업", "width=1000,height=1000");
+        }
+    </script>
+    <!--여기-->
+</head>
+<style>
+    *{
+        font-family: Pretendard, 'Source Sans Pro' !important;
+        line-height: 1.3500000146;
+}
+.flex-container {
+            display: flex;
+            align-items: center;
+            margin-top: 81px;
+}
+.back-button {
+    border: none;
+    background-color: #ffffff;
+    /* display: flex;; */
+    /* justify-items: flex-start; */
+}
+#h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    align-items: center;
+    justify-items: center;
+}
+.card-box {
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    width: 375.21px; 
+    height: 371.42px; 
+    box-shadow:  3.79px 7.58px 28.4px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+.card-name {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    color: #121212;
+    background-color: #ffffff;
+    font-family: Pretendard, 'Source Sans Pro';
+    font-weight: 400;
+}
+.card-delete {
+    width: 20%;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #A9A9A9;
+    background-color: #ffffff;
+    font-weight: 600;
+    border: none;
+}
+.card-section {
+    display: flex;
+    justify-content: center;
+}
+.image-button {
+    background: url("./plus_button.svg");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-emoji-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:230px;
+    height: 224.54px;
+}
+#greeting-icon {
+    background: url("./icon.png");
+    background-size: cover;
+    margin-bottom: 20px;
+    width: 73px;
+    height: 72px;
+}
+#card-box-font{
+    font-size: 21px;
+    width:230px;
+    height: 125px;
+    color: #121212;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <button class="back-button">
+                <a href="http://127.0.0.1:5500/randing_page.html">
+                    <img src="icon-arrow-left-small-mono.svg">
+                </a>
+                <!--profile-->
+            </button>
+            <div>
+                <h1 class = "h1" id="a">내가 등록한 위험물 목록</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div >
+            <div>
+                <p style="text-align: center; font-size: 21px; font-weight: 400; margin-top: 25px;"><b>고양이가 인덕션에 접촉했을 때 알림을 드립니다.<br>
+                    본인 집의 인덕션 사진을 업로드하셔서 알림을 받아보세요!</b></p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="card-section"> <!--style css 파일로 옮기기-->
+                <!-- figma 줄친 요소만들어서 div로 하나로 묶기 -->
+                <div class="card">
+                    <p class="card-name">인덕션</p>
+                    <div class="card-box" style = "background-color: #ffffff;" >
+                        <button class="image-button" onclick="openPopup()"></button>
+                    </div> 
+                    <button class = "card-delete">삭제</button>
+                </div>
+                <div class="card">
+                    <p class="card-name">추후 예정</p>
+                    <div class="card-box" style = "background-color: #E9F2FF;">
+                        <div class="card-emoji-container">
+                            <span id="greeting-icon"></span>
+                            <span id = 'card-box-font'>여러 대상들을 <br> 자유롭게 추가할 수 있도록 <br> 업데이트 예정에 있어요! <br><br> 기대해주세요!</span>
+                        </div>
+                    </div>
+                    <button class="card-delete">삭제</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Main 페이지</title>
+    <script>
+        function openPopup() {
+        var width = 500;
+        var height = 500;
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        var options = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+        window.open("popup.html", "팝업", options);
+    }
+    </script>
+</head>
+</html> 팝업 가운데로 오게하고 싶다면 이 코드 적용
+-->
+
+
+<!--
+    인덕션 박스 - 이미지에 추가하기 버튼 기능들어가면 됨
+    인덕션 박스 + 눌렀을 때 업로드 팝업창 뜨고 업로드 끝나면 이미지 업로드 되기
+    파일 다중 업로드와 삭제, 뒤로가기 버튼 구현
+    반응형-->
