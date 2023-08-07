@@ -119,8 +119,7 @@ const refreshToken = async () => {
 			document.querySelector('#kakao').classList.remove('display_none');
 			document.querySelector('#logout').classList.add('display_none');
 			document.querySelector("#nickname").classList.add('display_none');
-			document.querySelector("#profile").classList.add('display_none');
-	
+			document.querySelector("#profile").classList.add('display_none');	
 			onKakao();
 			return;
 		}
