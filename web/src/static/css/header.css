@@ -198,11 +198,3 @@ nav {
   src: url("./../fonts/Pretendard-SemiBold.otf") format("opentype");
   font-weight: 400;
 }
-
-.primary_container {
-  overflow-y: scroll;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  /* overflow-x: hidden; */
-}
