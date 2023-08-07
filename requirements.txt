@@ -14,3 +14,5 @@ tinydb==4.3.0
 urllib3==1.26.3
 Werkzeug==1.0.1
 flask_uploads==0.2.1
+ultralytics==8.0.99
+opencv-python==4.7.0.72
