@@ -164,12 +164,17 @@
   <div class="contents_frame">
     <div class="left_contents_frame">
       <div class="main_messege">등록한 위험물이 없어요! 한개 이상의 위험물을 등록해 주세요!</div>
-      <img class="video_area" src="{{url_for('static', filename='image/placeholder-video.png')}}"/>
+        <section>
+          <div class="col-sm">
+            <img src="{{ url_for('webapp') }}" alt="Upload video" width="100%" height="auto" autoplay="">
+          </div>
+        </section>
       <p class="copyrightc">Copyright(c) 2023. H.AI. All rights reserved.</p>
     </div>
     <div class="right_contents_frame">
       <div class="right_contents_title">
         <div class="recordTxt">Record</div>
+
         <a href="http://127.0.0.1:5000/Dangerous_List">
           <img class="icon-plus-circle-mono-5x5" src="{{url_for('static', filename='image/plus_button.svg')}}"></a>
       </div>
