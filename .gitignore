@@ -129,11 +129,13 @@ dmypy.json
 # Pyre type checker
 .pyre/
 **/config.py
+./web/src/config.py
 
 *.otf
 *.woff
 
 **/db.json
+db.json
 
 src/static/fonts/.otf 폰트
 
