@@ -128,7 +128,7 @@ def main03():
     return render_template('pages/main03.html')
 
 @app.route("/Dangerous_List")
-def Dangerous_List():
+def dangerous_list():
     return render_template('pages/Dangerous_List.html')
 
 @app.route("/oauth")
