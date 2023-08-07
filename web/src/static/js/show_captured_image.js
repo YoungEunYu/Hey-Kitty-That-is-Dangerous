@@ -1,14 +1,13 @@
 const scrollArea = document.getElementById("scroll_area");
 let warning_files = [];
 function updateImages() {
-    $.get('/get_images', function(data) {
+    $.get('/get_images', function (data) {
         if (check_changed_file(warning_files, data)) {
             scrollArea.innerHTML = null;
             warning_files = manage_files(warning_files, data);
             warning_files.forEach((file) => {
                 let divRecordContent = document.createElement('div');
                 divRecordContent.classList.add("record_content_box");
-                
                 let divDetectTime = document.createElement('div');
                 divDetectTime.classList.add("detectTime");
                 divDetectTime.innerText = formatDate(file.slice(10, 24));
@@ -58,7 +57,7 @@ function manage_files(files, value) {
     if (files.length >= 3) {
         files = files.slice(0, files.length - 1);
     }
-    return [value, ...files]; 
+    return [value, ...files];
 }
 
 function check_changed_file(files, value) {
