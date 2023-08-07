@@ -135,3 +135,6 @@ src/config.py
 *.woff
 
 config.py
+
+src/db.json
+src/static/fonts/.otf 폰트

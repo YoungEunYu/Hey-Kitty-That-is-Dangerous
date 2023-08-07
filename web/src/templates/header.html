@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,15 +54,12 @@
                     </li>
                 </ul>
             </nav>
-
-
     </div>
     </header>
 
     <div class="primary_container">
         {# 다른 html 코드들을 아래 공간에 넣으면 된다!!!!
         자기 html파일에 {% extends 'header.html'%} 작성해서 넣으면 이 header가 들어옴!!! #}
-
         {% block content %}
         {% endblock %}
 
@@ -76,5 +72,4 @@
         }</script>
     <script src="{{url_for('static', filename='js/main.js')}}"></script>
 </body>
-
 </html>
