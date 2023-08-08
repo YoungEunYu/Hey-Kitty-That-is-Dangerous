@@ -10,7 +10,9 @@
 You need to modify `.venv/Lib/site-packages/flask_uploads.py`
 
 ## Before
-`from werkzeug import secure_filename, FileStorage`
+```sh
+from werkzeug import secure_filename, FileStorage
+```
 
 ## After
 ```sh
