@@ -74,7 +74,7 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
     Performs object detection on an image or video.
 
     Args:
-        model_name (str): The name of the model to use for object detection. Default is 'yolov8s.pt'.
+        model_name (str): The name of the model to use for object detection. Default is 'yolov8n.pt'.
         source (Union[str, int]): The path to the image or video file or webcam index. Default is 0 (webcam).
         prediction_type (str): The type of prediction to make. Valid values are 'image' and 'video'. Default is 'video'.
         class_path (str): The path to the file containing class names. Default is 'classes.txt'.
@@ -120,6 +120,7 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
             if not ret:
                 break
 
+            # Setting yolo parameters
             if frame_counter % n == 0:
                 outs = model(frame, task='detect', iou=0.6, conf=0.8, show=False, save_conf=True, classes=[0, 1], boxes=False)
 
@@ -131,6 +132,7 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
                 stove_boxes = []
                 cat_flag, stove_flag = 0, 0
 
+                # Setting coordinates
                 for i in range(length):
                     if pred_classes[i] in ['cat']:
                         cat_boxes.append((round(pred_bbox[i][0]), round(pred_bbox[i][1]), round(pred_bbox[i][0] + pred_bbox[i][2]), round(pred_bbox[i][1] + pred_bbox[i][3])))
