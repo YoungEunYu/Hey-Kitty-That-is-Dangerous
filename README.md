@@ -4,21 +4,21 @@
 # 3. Branch
 
 # Version & Settings
-## Python Version 3.10.10
+    - Python 3.10.10
 
-# Werkzeug issue
-You need to modify `.venv/Lib/site-packages/flask_uploads.py`
+> Werkzeug issue
+- You need to modify `.venv/Lib/site-packages/flask_uploads.py`
 
-## Before
-```sh
-from werkzeug import secure_filename, FileStorage
-```
+    > Before
+        ```sh
+        from werkzeug import secure_filename, FileStorage
+        ```
 
-## After
-```sh
-from werkzeug.utils import secure_filename
-from werkzeug.datastructures import FileStorage
-```
+    > After
+        ```sh
+        from werkzeug.utils import secure_filename
+        from werkzeug.datastructures import FileStorage
+        ```
 
 ## Folder information
 1. code
