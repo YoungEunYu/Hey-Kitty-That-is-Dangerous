@@ -158,12 +158,12 @@ def oauth_api():
     resp = make_response(render_template('pages/index.html'))
     access_token = create_access_token(identity=user.id)
     refresh_token = create_refresh_token(identity=user.id)
-    resp.set_cookie("logined", "true", samesite='None', secure=None, path = '/')
+    resp.set_cookie("logined", "true", samesite = 'Lax') #samesite='None', secure=None, path = '/')
     set_access_cookies(resp, access_token)
     set_refresh_cookies(resp, refresh_token)
-    session["access_token"] = access_token
-    session["refresh_token"] = refresh_token
-    session["logined"] = "true"
+    # session["access_token"] = access_token
+    # session["refresh_token"] = refresh_token
+    # session["logined"] = "true"
     return resp
 
 
