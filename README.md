@@ -25,6 +25,7 @@ from werkzeug.datastructures import FileStorage
     - v4 : `stove, cat` detection(5,415 Images)
     - v5 : `stove, cat` detection(9,953 Images)
     - v6 : `stove, cat` detection(7,370 Images)
+    - v7 : `stove, cat` detection(7,370 Images), epoch 200
 
 3. Problem
     - v1 : `stove, display` class is confused
@@ -33,4 +34,4 @@ from werkzeug.datastructures import FileStorage
     - v3 : gas stove image is confused with steel dishes → train with induction(black & 2 plates)
     - v4 : Model is confused with rear and side view of cats → train side and rear view of cats(1,873 cat, 3,542 stove)
     - v5 : Model is confused with reflected light in stoves → delete images that are disturbing training
-    - v6 : 
+    - v6 : Model easily loses detection → train epoch 100 to 200

@@ -54,7 +54,7 @@ function formatDate(inputDate) {
   }
 
 function manage_files(files, value) {
-    if (files.length >= 3) {
+    if (files.length >= 10) {
         files = files.slice(0, files.length - 1);
     }
     return [value, ...files];
