@@ -4,7 +4,7 @@
 # 3. Branch
 
 # Version & Settings
-    - Python 3.10.10
+- Python 3.10.10
 
 > Werkzeug issue
 - You need to modify `.venv/Lib/site-packages/flask_uploads.py`
@@ -20,7 +20,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
 ```
 
-## Folder information
+# Folder information
 1. code
     - image preprocessing
     - yolo webcam stream
