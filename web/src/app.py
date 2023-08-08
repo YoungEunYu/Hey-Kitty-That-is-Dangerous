@@ -25,10 +25,6 @@ app.config['JWT_ACCESS_TOKEN_EXPIRES'] = 30
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = 100
 jwt = JWTManager(app)
 
-# sessionStorage를 사용하려면 secret key 값을 주어야 한다.
-SECRET_KEY = 'Oh, my cat! There is very dangerous zone!'
-app.secret_key = SECRET_KEY
-
 # 업로드 세트 설정
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'
@@ -158,12 +154,9 @@ def oauth_api():
     resp = make_response(render_template('pages/index.html'))
     access_token = create_access_token(identity=user.id)
     refresh_token = create_refresh_token(identity=user.id)
-    resp.set_cookie("logined", "true", samesite='None', secure=None, path = '/')
+    resp.set_cookie("logined", "true", samesite = 'Lax')
     set_access_cookies(resp, access_token)
     set_refresh_cookies(resp, refresh_token)
-    session["access_token"] = access_token
-    session["refresh_token"] = refresh_token
-    session["logined"] = "true"
     return resp
 
 
