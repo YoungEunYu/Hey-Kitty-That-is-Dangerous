@@ -6,14 +6,14 @@
 # Version & Settings
 ## Python Version 3.10.10
 
-## Werkzeug issue
+# Werkzeug issue
 You need to modify `.venv/Lib/site-packages/flask_uploads.py`
 
-### Before
+## Before
 `from werkzeug import secure_filename, FileStorage`
 
-### After
-`from werkzeug.utils import secure_filename  from werkzeug.datastructures import FileStorage`
+## After
+`from werkzeug.utils import secure_filename </br>from werkzeug.datastructures import FileStorage`
 
 ## Folder information
 1. code
