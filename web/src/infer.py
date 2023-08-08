@@ -152,17 +152,18 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
                         alarm_played = False
 
                 # Define the condition of alarm
-                for cat_box in cat_boxes:
-                    for stove_box in stove_boxes:
-                        if ((cat_box[1] > stove_box[1] and cat_box[1] < stove_box[3]) or (cat_box[3] > stove_box[1] and cat_box[3] < stove_box[3])) and ((cat_box[0] > stove_box[0] and cat_box[0] < stove_box[2]) or (cat_box[2] > stove_box[0] and cat_box[2] < stove_box[2])):
-                            if not alarm_played:
-                                pygame.mixer.music.play(-1)  # play in a loop
-                                alarm_played = True
-                                # Save the frame as an image
-                                timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-                                image_name = f"web/src/static/warnings/cat_alert_{timestamp}.jpg"
-                                cv2.imwrite(image_name, frame)
-                                frame = False
+                else:
+                    for cat_box in cat_boxes:
+                        for stove_box in stove_boxes:
+                            if ((cat_box[1] > stove_box[1] and cat_box[1] < stove_box[3]) or (cat_box[3] > stove_box[1] and cat_box[3] < stove_box[3])) and ((cat_box[0] > stove_box[0] and cat_box[0] < stove_box[2]) or (cat_box[2] > stove_box[0] and cat_box[2] < stove_box[2])):
+                                if not alarm_played:
+                                    pygame.mixer.music.play(-1)  # play in a loop
+                                    alarm_played = True
+                                    # Save the frame as an image
+                                    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+                                    image_name = f"web/src/static/warnings/cat_alert_{timestamp}.jpg"
+                                    cv2.imwrite(image_name, frame)
+                                    frame = False
                                 
             frame_counter += 1
             
