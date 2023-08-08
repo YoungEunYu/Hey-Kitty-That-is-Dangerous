@@ -1,5 +1,3 @@
-// # 시작 함수
-// 해당파일제일 최하단에 실행함수 존재함.
 const init = () => {
 	// 버튼 이벤트 등록
 	kakao_button = document.querySelector("#kakao");
@@ -20,7 +18,7 @@ const init = () => {
 	}
 		
 	// 자동 로그인 실행
-	autoLogin();
+	// autoLogin();
 
 	// 해당 함수는 Router 대신 실행하는 함수입니다.
 	redirectPage();
@@ -38,7 +36,8 @@ const onKakao = async () => {
 
 	let url = await fetch("/oauth/url", {
 		headers: { "Content-Type": "application/json" },
-		method: "GET"
+		method: "GET",
+		credentials: 'include',
 	})
 	.then(res => res.json())
 	.then(res => res['kakao_oauth_url']);
