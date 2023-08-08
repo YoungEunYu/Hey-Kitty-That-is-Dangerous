@@ -54,7 +54,7 @@ def draw_bbox(frame, boxes, class_names, colors):
 
         # Formatting the confidence level and label text
         conf = math.ceil((box.conf[0] * 100)) / 100
-        label = f'{class_name} ({conf}%)'
+        label = f'{class_name} ({conf})'
 
         # Calculating the size of the label text
         text_size = cv2.getTextSize(label, 0, fontScale=1, thickness=2)[0]
@@ -121,7 +121,7 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
                 break
 
             if frame_counter % n == 0:
-                outs = model(frame, task='detect', iou=0.6, conf=0.1, show=False, save_conf=True, classes=[0, 1], boxes=False)
+                outs = model(frame, task='detect', iou=0.6, conf=0.8, show=False, save_conf=True, classes=[0, 1], boxes=False)
 
                 pred_classes = [classes[int(i.item())] for i in outs[0].boxes.cls]
                 pred_bbox = [i.tolist() for i in outs[0].boxes.xywh]
