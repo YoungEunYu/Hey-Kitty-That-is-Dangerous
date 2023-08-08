@@ -144,6 +144,8 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
                 # Setting alarm lasting time
                 if alarm_played and (not cat_flag or not stove_flag):
                     not_detected += 1
+                    cat_boxes = [(0, 0, 0, 0)]
+                    stove_boxes = [(0, 0, 0, 0)]
                     if not_detected > 15:
                         pygame.mixer.music.stop()
                         not_detected = 0
