@@ -58,7 +58,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 `web/src` 폴더 안에 `config.py` 저장
 
 ## 2) 로그인한 사용자의 데이터가 저장되는 공간 생성
-`web/src` 안에 `db.json` 생성
+기본 경로에 `db.json` 생성
 
 ## 3) 이메일
 
@@ -123,8 +123,10 @@ web/src/static 안에 'warnings' 폴더 생성
 - `README.md` : 프로젝트 정보와 사용방법 설명
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
-#  참고자료
-
+# 참고자료
+yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
+alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
 
 
 # English(EN)
@@ -173,7 +175,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 Save `config.py` in `web/src` folder
 
 ## 2) Make json file to save login data
-Make `db.json` in `web/src`
+Make `db.json` in default path
 
 ## 3) E-mail
 
@@ -228,3 +230,8 @@ Make `warnings` folder in `web/src/static`
 - v4 : Model is confused with rear and side view of cats → train side and rear view of cats(1,873 cat, 3,542 stove)
 - v5 : Model is confused with reflected light in stoves → delete images that are disturbing training
 - v6 : Model easily loses detection → Increase train epoch 100 to 200(loss value was decreasing while 100 epochs)
+
+# Reference
+yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
+alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
