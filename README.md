@@ -230,7 +230,7 @@ Make `warnings` folder in `web/src/static`
 - v5 : Model is confused with reflected light in stoves → delete images that are disturbing training
 - v6 : Model easily loses detection → Increase train epoch 100 to 200(loss value was decreasing while 100 epochs)
 
-4. 파일 정보
+4. File information
 - `app.py` : Execute flask and show web pages
 - `controller.py` : Module to communicate with Kakao Auth, API server
 - `infer.py` : Execut YOLOv8
