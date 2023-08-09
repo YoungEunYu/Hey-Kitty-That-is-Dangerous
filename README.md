@@ -8,13 +8,13 @@
 
 
 # 브랜치
-    - YOLO-FLASK : flask 서버에서 YOLO가 실행되는 기능 구현
-    - web-dev : 웹 개발 통합 브랜치
-    - dangerous-list : 위험물 등록 페이지 구현
-    - dropdown : 드롭다운 박스 기능 구현
-    - header-main-page : 메인 화면 및 헤더 페이지 구현
-    - notification : 이메일 알림 기능 구현
-    - upload_delete : 사용자의 업로드와 삭제 기능 구현
+- YOLO-FLASK : flask 서버에서 YOLO가 실행되는 기능 구현
+- web-dev : 웹 개발 통합 브랜치
+- dangerous-list : 위험물 등록 페이지 구현
+- dropdown : 드롭다운 박스 기능 구현
+- header-main-page : 메인 화면 및 헤더 페이지 구현
+- notification : 이메일 알림 기능 구현
+- upload_delete : 사용자의 업로드와 삭제 기능 구현
 
 # 버전
 - `Python 3.10.10`
@@ -103,8 +103,7 @@ web/src/static 안에 'warnings' 폴더 생성
 - v7 : `stove, cat` 탐지(7,370장), epoch 200회
 
 3-3-2. 문제점 및 개선사항
-- v1 : `stove, display` 객체 혼동
-        `dresser, closet` 객체는 잘 인식 못함(데이터 비중이 매우 낮음)
+- v1 : `stove, display` 객체 혼동</br>`dresser, closet` 객체는 잘 인식 못함(데이터 비중이 매우 낮음)
 - v2 : `stove` 객체 데이터 부족 → `stove` 데이터 증량
 - v3 : 가스렌지와 스테인리스 그릇을 잘 구분 못함 → `stove`를 2구 이하 검은색 인덕션으로 한정
 - v4 : 고양이의 측면과 뒷면을 잘 인식 못함 → 고양이 측면과 뒷면 사진 증량(1,873 cat, 3,542 stove)
@@ -133,24 +132,24 @@ web/src/static 안에 'warnings' 폴더 생성
 - `Python 3.10.10`
 - **Werkzeug issue**: You need to modify `.venv/Lib/site-packages/flask_uploads.py`
   
-    ```python
-    # Before
-    from werkzeug import secure_filename, FileStorage
-    # After
-    from werkzeug.utils import secure_filename
-    from werkzeug.datastructures import FileStorage
-    ```
+```python
+# Before
+from werkzeug import secure_filename, FileStorage
+# After
+from werkzeug.utils import secure_filename
+from werkzeug.datastructures import FileStorage
+```
 
 # Settings
 - `config.py` : Kakao Developers에서 어플리케이션 등록을 한 후, 발급받은 Client_id, Client_Secret, Redirect_URI를 입력
   
-  ```python
-  # config.py 예시
-  CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
-  CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
-  REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
-  SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
-    ```
+```python
+# config.py 예시
+CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
+CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
+REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
+SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
+```
 
 ## E-mail
 
