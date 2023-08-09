@@ -83,7 +83,8 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 2. uploads
 - 사용자가 업로드한 이미지가 저장되는 공간
 
-3. web/src</br>
+3. web/src
+
 3-1. static
 - 웹페이지에 구성에 필요한 이미지, 폰트가 저장되어 있음
 - 탐지된 이미지 저장됨
@@ -199,7 +200,8 @@ Make `warnings` folder in `web/src/static`
 2. uploads
 - Images that are uploaded by user saved
 
-3. web/src</br>
+3. web/src
+
 3-1. static
 - Images and fonts required for web page are stored
 - Save images captured while alerting
