@@ -124,9 +124,9 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
 # 참고자료
-yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
-메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
-alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
+- yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+- 메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
+- alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
 
 
 # English(EN)
@@ -242,6 +242,6 @@ Make `warnings` folder in `web/src/static`
 - `requirements.txt` : Python pakages required for service
 
 # Reference
-yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
-mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
-alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
+- yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+- mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
+- alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
