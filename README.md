@@ -58,7 +58,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 `web/src` 폴더 안에 `config.py` 저장
 
 ## 2) 로그인한 사용자의 데이터가 저장되는 공간 생성
-`db.json`  
+`web/src` 안에 `db.json` 생성
 
 ## 3) 이메일
 
@@ -159,6 +159,7 @@ from werkzeug.datastructures import FileStorage
 ```
 
 # Settings
+## 1) Kakao Login
 - `config.py` : Registrate your application on Kakao Developers, and write your issued Client_id, Client_Secret, Redirect_URI
   
 ```python
@@ -171,7 +172,10 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 Save `config.py` in `web/src` folder
 
-## E-mail
+## 2) Make json file to save login data
+Make `db.json` in `web/src`
+
+## 3) E-mail
 
 1. In the setting_email.py file make the necessary changes wherever mentioned.
 
@@ -182,6 +186,9 @@ Save `config.py` in `web/src` folder
 4. Go to [App Passwords](https://myaccount.google.com/apppasswords) and create custom app name and then click on generate. 
 
 5. Copy the generated password and paste it in the variable "password" in the setting_email.py file.
+
+## 4) Make directory to save captured images
+Make `warnings` folder in `web/src/static`
 
 # Folder information
 1. preprocessing & training
