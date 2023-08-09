@@ -36,30 +36,31 @@ python app.py
 ```
 
 - **Werkzeug issue**: 해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`
-  
-    ```python
-    # 이전
-    from werkzeug import secure_filename, FileStorage
-    # 이후
-    from werkzeug.utils import secure_filename
-    from werkzeug.datastructures import FileStorage
-    ```
+```python
+# 이전
+from werkzeug import secure_filename, FileStorage
+# 이후
+from werkzeug.utils import secure_filename
+from werkzeug.datastructures import FileStorage
+```
 
 # 환경설정
-## 카카오 로그인
+## 1) 카카오 로그인
 - `config.py` : Kakao Developers에서 어플리케이션 등록을 한 후, 발급받은 Client_id, Client_Secret, Redirect_URI를 입력
-  
-  ```python
-  # config.py 예시
-  CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
-  CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
-  REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
-  SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
-    ```
+```python
+# config.py 예시
+CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
+CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
+REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
+SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
+```
 
 `web/src` 폴더 안에 `config.py` 저장
 
-## 이메일
+## 2) 로그인한 사용자의 데이터가 저장되는 공간 생성
+`db.json`  
+
+## 3) 이메일
 
 1. setting_email.py 파일을 수정해야 함
 
@@ -71,7 +72,7 @@ python app.py
 
 5. 생성된 암호를 복사하여 setting_email.py "password" 변수에 복사
 
-## 탐지 이미지가 저장될 공간 생성
+## 4) 탐지 이미지가 저장될 공간 생성
 web/src/static 안에 'warnings' 폴더 생성
 
 # 폴더 정보
