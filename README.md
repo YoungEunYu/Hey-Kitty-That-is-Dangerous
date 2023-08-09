@@ -3,23 +3,28 @@
 # 2. Objective(목표)
 # 3. Branch
 
-# Version & Settings
-- Python 3.10.10
+# Version
+- `Python 3.10.10`
+- **Werkzeug issue**: You need to modify `.venv/Lib/site-packages/flask_uploads.py`
+  
+    ```python
+    # Before
+    from werkzeug import secure_filename, FileStorage
+    # After
+    from werkzeug.utils import secure_filename
+    from werkzeug.datastructures import FileStorage
+    ```
 
-> Werkzeug issue
-- You need to modify `.venv/Lib/site-packages/flask_uploads.py`
-
-### Before
-```python
-from werkzeug import secure_filename, FileStorage
-```
-
-### After
-```python
-from werkzeug.utils import secure_filename
-from werkzeug.datastructures import FileStorage
-```
-
+# Settings
+- `config.py` : Kakao Developers에서 어플리케이션 등록을 한 후, 발급받은 Client_id, Client_Secret, Redirect_URI를 입력
+  
+  ```python
+  # config.py 예시
+  CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
+  CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
+  REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
+  SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
+    ```
 # Folder information
 1. code
     - image preprocessing
