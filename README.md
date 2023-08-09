@@ -73,7 +73,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 5. 생성된 암호를 복사하여 setting_email.py "password" 변수에 복사
 
 ## 4) 탐지 이미지가 저장될 공간 생성
-web/src/static 안에 'warnings' 폴더 생성
+`web/src/static` 폴더 안에 `warnings` 폴더 생성
 
 # 폴더 정보
 1. preprocessing & training
@@ -83,7 +83,7 @@ web/src/static 안에 'warnings' 폴더 생성
 2. uploads
 - 사용자가 업로드한 이미지가 저장되는 공간
 
-3. web/src
+3. web/src</br>
 3-1. static
 - 웹페이지에 구성에 필요한 이미지, 폰트가 저장되어 있음
 - 탐지된 이미지 저장됨
@@ -199,7 +199,7 @@ Make `warnings` folder in `web/src/static`
 2. uploads
 - Images that are uploaded by user saved
 
-3. web/src
+3. web/src</br>
 3-1. static
 - Images and fonts required for web page are stored
 - Save images captured while alerting
