@@ -8,7 +8,10 @@
 
 
 # 브랜치
-    - Jinmyung : flask 서버에서 YOLO가 실행되는 부분 담당
+    - YOLO-FLASK : flask 서버에서 YOLO가 실행되는 기능 구현
+    - web-dev : 웹 개발 통합 브랜치
+    - dropdown : 드롭다운 박스 기능 구현
+    - 
 
 # 버전
 - `Python 3.10.10`
@@ -32,9 +35,9 @@ python app.py
 - **Werkzeug issue**: 해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`
   
     ```python
-    # Before
+    # 이전
     from werkzeug import secure_filename, FileStorage
-    # After
+    # 이후
     from werkzeug.utils import secure_filename
     from werkzeug.datastructures import FileStorage
     ```
@@ -117,7 +120,7 @@ web/src/static 안에 'warnings' 폴더 생성
 
 
 
-# English
+# English(EN)
 # 0. Project Name : 야옹아 거기는 위험해!
 # 1. Description(프로젝트 설명)
 # 2. Objective(목표)
