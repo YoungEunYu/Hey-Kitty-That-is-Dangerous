@@ -6,6 +6,7 @@ from seaborn import color_palette
 import os
 import pygame as pygame
 import datetime
+import setting_email
 
 
 def load_class_names(file_name):
@@ -162,7 +163,10 @@ def run_yolo(model_name='web/src/yolo_assets/Models/v7.pt', source=0, prediction
                                     # Save the frame as an image
                                     timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
                                     image_name = f"web/src/static/warnings/cat_alert_{timestamp}.jpg"
+                                    image_path = image_name.split('/')[-1]
                                     cv2.imwrite(image_name, frame)
+                                    if cv2.imwrite(image_name, frame):
+                                        setting_email.notify(image_path)
                                     frame = False
                                 
             frame_counter += 1
