@@ -110,9 +110,9 @@ web/src/static 안에 'warnings' 폴더 생성
 
 4. 파일 정보
 - `app.py` : flask 구동하고 웹페이지를 띄움
-- `controller.py` : 
+- `controller.py` : Kakao Auth, API 서버와 통신하기 위해 필요한 모듈
 - `infer.py` : YOLO 모델을 실행
-- `model.py` : 
+- `model.py` : 데이터를 생성하고 조회
 - `setting_email.py` : 메일을 받을 사용자를 설정
 - `TestRequest.py`
 - `README.md` : 프로젝트 정보와 사용방법 설명
