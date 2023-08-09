@@ -20,7 +20,7 @@ def notify(filename):
 	ema["subject"] = subject
 	text = MIMEText("고양이가 인덕션에 다가왔어요!!")
 	ema.attach(text)
-	with open("static/warnings/" + filename, 'rb') as f:
+	with open("web/src/static/warnings/" + filename, 'rb') as f:
 		img_data = f.read()
 
 	image = MIMEImage(img_data, name=os.path.basename(filename))
