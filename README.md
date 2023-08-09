@@ -117,9 +117,8 @@ web/src/static 안에 'warnings' 폴더 생성
 - `app.py` : flask 구동하고 웹페이지를 띄움
 - `controller.py` : Kakao Auth, API 서버와 통신하기 위해 필요한 모듈
 - `infer.py` : YOLO 모델을 실행
-- `model.py` : 데이터를 생성하고 조회
+- `model.py` : 로그인한 사용자의 데이터를 생성하고 조회
 - `setting_email.py` : 메일을 받을 사용자를 설정
-- `TestRequest.py`
 - `README.md` : 프로젝트 정보와 사용방법 설명
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
@@ -223,13 +222,22 @@ Make `warnings` folder in `web/src/static`
 - v6 : `stove, cat` detection(7,370 Images)
 - v7 : `stove, cat` detection(7,370 Images), epoch 200
 
-3. Problem
+3-3-2. Problem & Improvements
 - v1 : `stove, display` class is confused</br>  `dresser, closet` class is unbalanced than other classes(Not enough images)
 - v2 : `stove` class data is not enough → Increase `stove` class data
 - v3 : gas stove image is confused with steel dishes → train with induction(black & 2 plates)
 - v4 : Model is confused with rear and side view of cats → train side and rear view of cats(1,873 cat, 3,542 stove)
 - v5 : Model is confused with reflected light in stoves → delete images that are disturbing training
 - v6 : Model easily loses detection → Increase train epoch 100 to 200(loss value was decreasing while 100 epochs)
+
+4. 파일 정보
+- `app.py` : Execute flask and show web pages
+- `controller.py` : Module to communicate with Kakao Auth, API server
+- `infer.py` : Execut YOLOv8
+- `model.py` : Generate user data and check
+- `setting_email.py` : Setting email to send and receive
+- `README.md` : Explain project information and user guide
+- `requirements.txt` : Python pakages required for service
 
 # Reference
 yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
