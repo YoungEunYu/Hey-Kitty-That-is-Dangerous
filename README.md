@@ -25,6 +25,19 @@
   REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
   SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
     ```
+
+## E-mail
+
+1. In the em.py file make the necessary changes wherever mentioned.
+
+2. Go to [My Google Account -> Security](https://myaccount.google.com/security).
+
+3. Enable 2-Step verification and complete the process.
+
+4. Go to [App Passwords](https://myaccount.google.com/apppasswords) and create custom app name and then click on generate. 
+
+5. Copy the generated password and paste it in the variable "password" in the em.py file.
+
 # Folder information
 1. code
     - image preprocessing
