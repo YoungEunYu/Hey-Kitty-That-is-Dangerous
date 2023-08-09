@@ -10,8 +10,11 @@
 # 브랜치
     - YOLO-FLASK : flask 서버에서 YOLO가 실행되는 기능 구현
     - web-dev : 웹 개발 통합 브랜치
+    - dangerous-list : 위험물 등록 페이지 구현
     - dropdown : 드롭다운 박스 기능 구현
-    - 
+    - header-main-page : 메인 화면 및 헤더 페이지 구현
+    - notification : 이메일 알림 기능 구현
+    - upload_delete : 사용자의 업로드와 삭제 기능 구현
 
 # 버전
 - `Python 3.10.10`
