@@ -57,6 +57,8 @@ python app.py
   SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
     ```
 
+`web/src` 폴더 안에 `config.py` 저장
+
 ## 이메일
 
 1. setting_email.py 파일을 수정해야 함
@@ -120,13 +122,28 @@ web/src/static 안에 'warnings' 폴더 생성
 - `README.md` : 프로젝트 정보와 사용방법 설명
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
+#  참고자료
+
 
 
 # English(EN)
-# 0. Project Name : 야옹아 거기는 위험해!
-# 1. Description(프로젝트 설명)
-# 2. Objective(목표)
-# 3. Branch
+# Project Name : Hey kitty! That is dangerous!!
+
+
+# Description
+
+
+# Objective
+
+
+# Branch
+- YOLO-FLASK : execute YOLO in flask server
+- web-dev : Integrated branch about web development
+- dangerous-list : Dangerous object upload page implemented
+- dropdown : Dropdown Menu page implemented
+- header-main-page : Main & Header page implemented
+- notification : Email notification page implemented
+- upload_delete : User image upload and delete function implemented
 
 # Version
 - `Python 3.10.10`
@@ -141,19 +158,21 @@ from werkzeug.datastructures import FileStorage
 ```
 
 # Settings
-- `config.py` : Kakao Developers에서 어플리케이션 등록을 한 후, 발급받은 Client_id, Client_Secret, Redirect_URI를 입력
+- `config.py` : Registrate your application on Kakao Developers, and write your issued Client_id, Client_Secret, Redirect_URI
   
 ```python
-# config.py 예시
+# config.py example
 CLIENT_ID = "9gjx2p4m6a1e5c8q7h0f3k2b1d4w6z8r9t7y"
 CLIENT_SECRET = "s2d8f9a4j6l0p3r5e7t1y6x4z8c2v0b"
-REDIRECT_URI = "http://localhost:5000/oauth" # 로그인 이후에 갈 URL
+REDIRECT_URI = "http://localhost:5000/oauth" # Login Redirect URL
 SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout" 
 ```
 
+Save `config.py` in `web/src` folder
+
 ## E-mail
 
-1. In the em.py file make the necessary changes wherever mentioned.
+1. In the setting_email.py file make the necessary changes wherever mentioned.
 
 2. Go to [My Google Account -> Security](https://myaccount.google.com/security).
 
@@ -161,7 +180,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 4. Go to [App Passwords](https://myaccount.google.com/apppasswords) and create custom app name and then click on generate. 
 
-5. Copy the generated password and paste it in the variable "password" in the em.py file.
+5. Copy the generated password and paste it in the variable "password" in the setting_email.py file.
 
 # Folder information
 1. code
