@@ -1,4 +1,4 @@
-<div>
+<div align="center">
       <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.md"><img alt="lang_KR" src="https://img.shields.io/badge/lang-KR-orange"></a>
       <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.en.md"><img alt="lang_EN" src="https://img.shields.io/badge/lang-EN-orange"></a>
 </div>
