@@ -1,4 +1,6 @@
-# [한글](README.md) | [English](README.en.md)
+<div align="center">
+[한글](README.md) | [English](README.en.md)
+</div>
 # 프로젝트 이름 : 야옹아 거기는 위험해!
 
 # 프로젝트 설명
