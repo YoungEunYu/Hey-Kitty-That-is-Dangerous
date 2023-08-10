@@ -63,8 +63,8 @@ pip install -r ./requirements.txt
 python app.py
 ```
 
-## 2) Werkzeug issue
-해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`<a id="issue"></a>
+## 2) Werkzeug issue<a id="issue"></a>
+해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`
 ```python
 # 이전
 from werkzeug import secure_filename, FileStorage
