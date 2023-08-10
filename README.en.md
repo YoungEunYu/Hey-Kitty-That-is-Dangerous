@@ -3,6 +3,29 @@
       <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.en.md"><img alt="lang_EN" src="https://img.shields.io/badge/lang-EN-orange"></a>
 </div>
 
+- [Project Name](#project-name)
+- [Description](#description)
+- [Objective](#objective)
+- [Branch](#branch)
+- [Version](#version)
+  - [Werkzeug issue](#issue)
+- [Settings](#settings)
+  - [Kakao Login](#login)
+  - [Make json file to save login data](#database)
+  - [E-mail](#email)
+  - [Make directory to save captured images](#capture)
+- [Folder information](#folder-info)
+  - [preprocessing & training](#preprocessing-training)
+  - [uploads](#upload)
+  - [web/src](#web-src)
+    - [static](#static)
+    - [templates](#templates)
+    - [yolo_assets](#yolo-assets)
+      - [Training version](#train-version)
+      - [Problem & Improvements](#problem-improvements)
+  - [File information](#file-info)
+- [Reference](#reference)
+
 # Project Name : Hey kitty! That is dangerous!!
 
 
