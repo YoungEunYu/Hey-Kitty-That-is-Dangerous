@@ -7,9 +7,9 @@
 - [프로젝트 설명](#description)
 - [목표](#objective)
 - [브랜치](#branch)
-- [버전](#version)
-  - [Werkzeug issue](#issue)
 - [환경설정](#settings)
+  - [가상환경 설정](#venv)
+  - [Werkzeug issue](#issue)
   - [카카오 로그인](#login)
   - [로그인한 사용자의 데이터가 저장되는 공간 생성](#database)
   - [이메일](#email)
@@ -43,8 +43,9 @@
 - notification : 이메일 알림 기능 구현
 - upload_delete : 사용자의 업로드와 삭제 기능 구현
 
-# 버전<a id="version"></a>
-- `Python 3.10.10`
+# 환경설정<a id="settings"></a>
+## 1) 가상환경 설정<a id="venv"></a>
+`Python 3.10.10` 설치
 ```python
 # 가상환경 설정(.venv)
 py -3.10 -m venv .venv
@@ -62,7 +63,8 @@ pip install -r ./requirements.txt
 python app.py
 ```
 
-- **Werkzeug issue**: 해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`<a id="issue"></a>
+## 2) Werkzeug issue
+해당 경로에 있는 파일 수정이 필요함 `.venv/Lib/site-packages/flask_uploads.py`<a id="issue"></a>
 ```python
 # 이전
 from werkzeug import secure_filename, FileStorage
@@ -71,8 +73,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
 ```
 
-# 환경설정<a id="settings"></a>
-## 1) 카카오 로그인<a id="login"></a>
+## 3) 카카오 로그인<a id="login"></a>
 - `config.py` : Kakao Developers에서 어플리케이션 등록을 한 후, 발급받은 Client_id, Client_Secret, Redirect_URI를 입력
 ```python
 # config.py 예시
@@ -84,10 +85,10 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 `web/src` 폴더 안에 `config.py` 저장
 
-## 2) 로그인한 사용자의 데이터가 저장되는 공간 생성<a id="database"></a>
+## 4) 로그인한 사용자의 데이터가 저장되는 공간 생성<a id="database"></a>
 기본 경로에 `db.json` 생성
 
-## 3) 이메일<a id="email"></a>
+## 5) 이메일<a id="email"></a>
 
 1. setting_email.py 파일을 수정해야 함
 
@@ -99,7 +100,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 5. 생성된 암호를 복사하여 setting_email.py "password" 변수에 복사
 
-## 4) 탐지 이미지가 저장될 공간 생성<a id="capture"></a>
+## 6) 탐지 이미지가 저장될 공간 생성<a id="capture"></a>
 `web/src/static` 폴더 안에 `warnings` 폴더 생성
 
 # 폴더 정보<a id="folder-info"></a>
