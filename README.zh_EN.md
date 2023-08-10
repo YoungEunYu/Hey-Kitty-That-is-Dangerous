@@ -110,6 +110,6 @@ Make `warnings` folder in `web/src/static`
 - `requirements.txt` : Python pakages required for service
 
 # Reference
-yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
-mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
-alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
+- yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+- mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
+- alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
