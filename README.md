@@ -114,7 +114,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 3. web/src<a id="web-src"></a>
 
 3-1. static<a id="static"></a>
-- 웹페이지에 구성에 필요한 이미지, 폰트가 저장되어 있음
+- 웹페이지에 구성에 필요한 이미지가 저장되어 있음
 - 탐지된 이미지 저장됨
 
 3-2. templates<a id="templates"></a>
