@@ -1,9 +1,15 @@
 <div align="center">
+      <img width="100%" src="https://github.com/jm83-database/Playdata-H.AI/blob/main/cat_alert.png"></a>
+      <p style="font-size: 30px;">야옹아 거기는 위험해!</p>
+</div>
+
+<div align="center">
       <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.md"><img alt="lang_KR" src="https://img.shields.io/badge/lang-KR-orange"></a>
       <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.en.md"><img alt="lang_EN" src="https://img.shields.io/badge/lang-EN-orange"></a>
 
 </div>
 
+# 개요
 - [프로젝트 이름](#project-name)
 - [프로젝트 설명](#description)
 - [목표](#objective)
