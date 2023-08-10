@@ -14,6 +14,7 @@
   - [Make json file to save login data](#database)
   - [E-mail](#email)
   - [Make directory to save captured images](#capture)
+  - [Install Pretendard font](#font)
 - [Folder information](#folder-info)
   - [preprocessing & training](#preprocessing-training)
   - [uploads](#upload)
@@ -106,6 +107,9 @@ Make `db.json` in default path
 
 ## 6) Make directory to save captured images<a id="capture"></a>
 Make `warnings` folder in `web/src/static`
+
+## 7) Install Pretendard font<a id="font"></a>
+Make `fonts` folder in `web/src/static` and save [Pretend fonts](https://cactus.tistory.com/306) inside `fonts`
 
 # Folder information<a id="folder-info"></a>
 1. preprocessing & training<a id="preprocessing-training"></a>
