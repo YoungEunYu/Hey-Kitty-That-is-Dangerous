@@ -94,7 +94,7 @@ Make `warnings` folder in `web/src/static`
 - `image_preprocessing.ipynb` ← Image preprocessing(Increase images)
 - `cat_alertv7.ipynb` ← YOLOv8 custom data training  
 
-2. uploads<a id="preprocessing-training"></a>
+2. uploads<a id="upload"></a>
 - Images that are uploaded by user saved
 
 3. web/src</br><a id="web-src"></a>
