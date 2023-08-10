@@ -1,6 +1,6 @@
 <div align="center">
       <img width="100%" src="https://github.com/jm83-database/Playdata-H.AI/blob/main/cat_alert.png"></a>
-      <p style="font-size: 30px;">야옹아 거기는 위험해!</p>
+      <h1>야옹아 거기는 위험해!</h1>
 </div>
 
 <div align="center">
