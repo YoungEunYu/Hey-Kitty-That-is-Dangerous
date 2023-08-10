@@ -9,7 +9,7 @@
 - [브랜치](#branch)
 - [버전](#version)
   - [Werkzeug issue](#issue)
-- [환경설정)(#settings)
+- [환경설정](#settings)
   - [카카오 로그인](#login)
   - [로그인한 사용자의 데이터가 저장되는 공간 생성](#database)
   - [이메일](#email)
