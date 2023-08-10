@@ -49,19 +49,19 @@
 ## 1) Virtual environment<a id="venv"></a>
 Install `Python 3.10.10`
 ```python
-# 가상환경 설정(.venv)
+# Setting virtual environment(.venv)
 py -3.10 -m venv .venv
 
-# 가상환경 활성화
+# activate .venv
 ./.venv/Scripts/activate
 
-# pip 업그레이드
+# upgrade pip
 python -m pip install --upgrade pip
 
-# 패키지 설치
+# install packages
 pip install -r ./requirements.txt
 
-# 실행
+# execute
 python app.py
 ```
 
