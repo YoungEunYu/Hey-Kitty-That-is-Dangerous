@@ -103,6 +103,9 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 ## 6) 탐지 이미지가 저장될 공간 생성<a id="capture"></a>
 `web/src/static` 폴더 안에 `warnings` 폴더 생성
 
+## 7) Pretendard 폰트 설치
+`web/src/static` 폴더 안에 `fonts` 폴더 안에 저장
+
 # 폴더 정보<a id="folder-info"></a>
 1. preprocessing & training<a id="preprocessing-training"></a>
 - `image_preprocessing.ipynb` ← 이미지 전처리(이미지 데이터 증량)
@@ -114,7 +117,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 3. web/src<a id="web-src"></a>
 
 3-1. static<a id="static"></a>
-- 웹페이지에 구성에 필요한 이미지가 저장되어 있음
+- 웹페이지에 구성에 필요한 이미지 및 폰트가 저장되어 있음
 - 탐지된 이미지 저장됨
 
 3-2. templates<a id="templates"></a>
