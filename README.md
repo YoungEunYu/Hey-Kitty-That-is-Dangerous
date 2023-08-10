@@ -15,8 +15,8 @@
   - [이메일](#email)
   - [탐지 이미지가 저장될 공간 생성](#capture)
 - [폴더 정보](#folder-info)
-  - [전처리 & 학습](#preprocessing-training)
-  - [업로드](#upload)
+  - [preprocessing & training](#preprocessing-training)
+  - [uploads](#upload)
   - [web/src](#web-src)
     - [static](#static)
     - [templates](#templates)
@@ -107,7 +107,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 - `image_preprocessing.ipynb` ← 이미지 전처리(이미지 데이터 증량)
 - `cat_alertv7.ipynb` ← YOLOv8 커스텀 데이터 학습   
 
-2. uploads<a id="preprocessing-training"></a>
+2. uploads<a id="upload"></a>
 - 사용자가 업로드한 이미지가 저장되는 공간
 
 3. web/src<a id="web-src"></a>
