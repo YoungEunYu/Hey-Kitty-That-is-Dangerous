@@ -7,9 +7,9 @@
 - [Description](#description)
 - [Objective](#objective)
 - [Branch](#branch)
-
-  - [Werkzeug issue](#issue)
 - [Settings](#settings)
+  - [Virtual Environment](#venv)
+  - [Werkzeug issue](#issue)
   - [Kakao Login](#login)
   - [Make json file to save login data](#database)
   - [E-mail](#email)
@@ -47,7 +47,23 @@
 
 # Settings<a id="settings"></a>
 ## 1) Virtual environment<a id="venv"></a>
-- Install `Python 3.10.10`
+Install `Python 3.10.10`
+```python
+# 가상환경 설정(.venv)
+py -3.10 -m venv .venv
+
+# 가상환경 활성화
+./.venv/Scripts/activate
+
+# pip 업그레이드
+python -m pip install --upgrade pip
+
+# 패키지 설치
+pip install -r ./requirements.txt
+
+# 실행
+python app.py
+```
 
 ## 2) Werkzeug issue<a id="issue"></a>
 You need to modify `.venv/Lib/site-packages/flask_uploads.py`
