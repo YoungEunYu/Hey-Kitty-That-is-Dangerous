@@ -14,6 +14,7 @@
   - [로그인한 사용자의 데이터가 저장되는 공간 생성](#database)
   - [이메일](#email)
   - [탐지 이미지가 저장될 공간 생성](#capture)
+  - [Pretendard 폰트 설치](#font)
 - [폴더 정보](#folder-info)
   - [preprocessing & training](#preprocessing-training)
   - [uploads](#upload)
@@ -103,8 +104,8 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 ## 6) 탐지 이미지가 저장될 공간 생성<a id="capture"></a>
 `web/src/static` 폴더 안에 `warnings` 폴더 생성
 
-## 7) Pretendard 폰트 설치
-`web/src/static` 폴더 안에 `fonts` 폴더 안에 저장
+## 7) Pretendard 폰트 설치<a id="font"></a>
+`web/src/static` 폴더 안에 `fonts` 폴더 생성 후 안에 저장
 
 # 폴더 정보<a id="folder-info"></a>
 1. preprocessing & training<a id="preprocessing-training"></a>
