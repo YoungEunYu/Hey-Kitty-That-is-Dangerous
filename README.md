@@ -105,7 +105,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 `web/src/static` 폴더 안에 `warnings` 폴더 생성
 
 ## 7) Pretendard 폰트 설치<a id="font"></a>
-`web/src/static` 폴더 안에 `fonts` 폴더 생성 후 안에 저장
+`web/src/static` 폴더 안에 `fonts` 폴더 생성 후 [Pretendard 폰트](https://cactus.tistory.com/306) 저장
 
 # 폴더 정보<a id="folder-info"></a>
 1. preprocessing & training<a id="preprocessing-training"></a>
