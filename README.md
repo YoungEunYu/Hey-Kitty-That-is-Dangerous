@@ -92,11 +92,11 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 1. setting_email.py 파일을 수정해야 함
 
-2. [My Google Account -> Security](https://myaccount.google.com/security)로 이동.
+2. [내 계정 -> 보안](https://myaccount.google.com/security)로 이동.
 
 3. 2단계 인증 활성화
 
-4. [App Passwords](https://myaccount.google.com/apppasswords)로 이동하여 커스텀 앱 이름을 작성 후 생성
+4. [앱 비밀번호](https://myaccount.google.com/apppasswords)로 이동하여 커스텀 앱 이름을 작성 후 생성
 
 5. 생성된 암호를 복사하여 setting_email.py "password" 변수에 복사
 
