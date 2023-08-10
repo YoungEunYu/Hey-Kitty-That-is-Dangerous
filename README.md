@@ -118,7 +118,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 - 탐지된 이미지 저장됨
 
 3-2. templates<a id="templates"></a>
-- 서비스 페이지가 저장되어 있음
+- 서비스 페이지 목록
 
 3-3. yolo_assets<a id="yolo-assets"></a>
 - `Classes` : 탐지할 대상의 목록을 저장
