@@ -1,4 +1,7 @@
-# <center>[한글](README.md) | [English](README.en.md)</center>
+<div>
+      <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.md"><img alt="lang_KR" src="https://img.shields.io/badge/lang-KR-orange"></a>
+      <a href="https://github.com/jm83-database/Playdata-H.AI/blob/main/README.en.md"><img alt="lang_EN" src="https://img.shields.io/badge/lang-EN-orange"></a>
+</div>
 
 # 프로젝트 이름 : 야옹아 거기는 위험해!
 
