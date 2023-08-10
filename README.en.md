@@ -7,7 +7,7 @@
 - [Description](#description)
 - [Objective](#objective)
 - [Branch](#branch)
-- [Version](#version)
+
   - [Werkzeug issue](#issue)
 - [Settings](#settings)
   - [Kakao Login](#login)
@@ -45,9 +45,12 @@
 - notification : Email notification page implemented
 - upload_delete : User image upload and delete function implemented
 
-# Version<a id="version"></a>
-- `Python 3.10.10`
-- **Werkzeug issue**: You need to modify `.venv/Lib/site-packages/flask_uploads.py`<a id="issue"></a>
+# Settings<a id="settings"></a>
+## 1) Virtual environment<a id="venv"></a>
+- Install `Python 3.10.10`
+
+## 2) Werkzeug issue<a id="issue"></a>
+You need to modify `.venv/Lib/site-packages/flask_uploads.py`
   
 ```python
 # Before
@@ -57,8 +60,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
 ```
 
-# Settings<a id="settings"></a>
-## 1) Kakao Login<a id="login"></a>
+## 3) Kakao Login<a id="login"></a>
 - `config.py` : Registrate your application on Kakao Developers, and write your issued Client_id, Client_Secret, Redirect_URI
   
 ```python
@@ -71,10 +73,10 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 
 Save `config.py` in `web/src` folder
 
-## 2) Make json file to save login data<a id="database"></a>
+## 4) Make json file to save login data<a id="database"></a>
 Make `db.json` in default path
 
-## 3) E-mail<a id="email"></a>
+## 5) E-mail<a id="email"></a>
 
 1. In the setting_email.py file make the necessary changes wherever mentioned.
 
@@ -86,7 +88,7 @@ Make `db.json` in default path
 
 5. Copy the generated password and paste it in the variable "password" in the setting_email.py file.
 
-## 4) Make directory to save captured images<a id="capture"></a>
+## 6) Make directory to save captured images<a id="capture"></a>
 Make `warnings` folder in `web/src/static`
 
 # Folder information<a id="folder-info"></a>
