@@ -83,7 +83,8 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 2. uploads
 - 사용자가 업로드한 이미지가 저장되는 공간
 
-3. web/src</br>
+3. web/src
+
 3-1. static
 - 웹페이지에 구성에 필요한 이미지, 폰트가 저장되어 있음
 - 탐지된 이미지 저장됨
@@ -123,6 +124,6 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
 # 참고자료
-yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
-메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
-alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
+- yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
+- 메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
+- alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
