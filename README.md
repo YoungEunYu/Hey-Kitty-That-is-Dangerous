@@ -24,6 +24,7 @@
 - [프로젝트 이름](#project-name)
 - [프로젝트 설명](#description)
 - [목표](#objective)
+- [팀원 소개](#contributers)
 - [브랜치](#branch)
 - [환경설정](#settings)
   - [가상환경 설정](#venv)
@@ -53,6 +54,8 @@
 # 목표<a id="objective"></a>
 1. 사용자의 자유로운 위험물 등록
 2. 해당 위험물에 고양이가 접근하면 경보음 재생, 알림, 위험 상황 캡처
+
+# 팀원 소개<a id="contributers"></a>
 
 # 브랜치<a id="branch"></a>
 - YOLO-FLASK : flask 서버에서 YOLO가 실행되는 기능 구현
