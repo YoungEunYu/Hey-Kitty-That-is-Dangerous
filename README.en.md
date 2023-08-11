@@ -56,6 +56,14 @@ In order to relieve the anxiety of 2030 single-person household owners who have 
 2. When a cat approaches the dangerous object, it plays an alarm sound, send notifications, and capture the dangerous situation.
 
 # Contributors<a id="contributors"></a>
+- Model
+  + Sunhwa Bae : Image proprocessing & Data collect
+  + Jinmyung Choi : Team leader, YOLOv8 training & upgrade performance
+- Web
+  + Gio Kim : Implement dropdown box
+  + Seohyun Jang : Implement social login
+  + Youngeun Yu : Integrate web pages & main page production
+  + Yebin Yu : Implement dangerous object upload page and upload function
 
 # Branch<a id="branch"></a>
 - YOLO-FLASK : Execute YOLO in flask server
@@ -180,6 +188,7 @@ Make `fonts` folder in `web/src/static` and save [Pretend fonts](https://cactus.
 - `requirements.txt` : Python pakages required for service
 
 # Reference<a id="reference"></a>
+- YOLOv8 : https://github.com/ultralytics/ultralytics
 - yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
 - mail : https://github.com/AKLucifer666/Theft_Alert/tree/main
 - alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
