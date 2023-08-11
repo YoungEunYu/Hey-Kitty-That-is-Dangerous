@@ -50,6 +50,9 @@
 
 # Description<a id="description"></a>
 In order to relieve the anxiety of 2030 single-person household owners who have to leave their cats alone for a long time at school, work and to protect their cats from danger, when a cat approaches a dangerous object, it plays a warning sound, send notifications, and captures dangerous situations.
+<div align = "center">
+<a href="https://youtu.be/MhMSjokOuik" title="Cat alert"><img src="https://github.com/jm83-database/Playdata-H.AI/blob/main/thumbnail.jpg" alt="Cat alert" width="600px" align="center" /></a>
+</div>
 
 # Objective<a id="objective"></a>
 1. User's free registration of dangerous objects
