@@ -58,7 +58,7 @@ In order to relieve the anxiety of 2030 single-person household owners who have 
 # Contributors<a id="contributors"></a>
 - Model
   + Sunhwa Bae : Image proprocessing & Data collect
-  + Jinmyung Choi : Team leader, YOLOv8 training & upgrade performance
+  + Jinmyung Choi : Team leader, YOLOv8 training & upgrade performance, manage flask server
 - Web
   + Gio Kim : Implement dropdown box
   + Seohyun Jang : Implement social login
