@@ -47,13 +47,12 @@
 
 # Project Name : Hey kitty! That is dangerous!<a id="project-name"></a>
 
-
-
 # Description<a id="description"></a>
-
+In order to relieve the anxiety of 2030 single-person household owners who have to leave their cats alone for a long time at school, work and to protect their cats from danger, when a cat approaches a dangerous object, it plays a warning sound, send notifications, and captures dangerous situations.
 
 # Objective<a id="objective"></a>
-
+1. User's free registration of dangerous objects
+2. When a cat approaches the dangerous object, it plays an alarm sound, send notifications, and capture the dangerous situation.
 
 # Branch<a id="branch"></a>
 - YOLO-FLASK : Execute YOLO in flask server
