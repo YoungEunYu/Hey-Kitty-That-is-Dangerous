@@ -175,6 +175,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
 - `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
 # 참고자료<a id="reference"></a>
+- yolov8 : https://github.com/ultralytics/ultralytics
 - yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
 - 메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
 - alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
