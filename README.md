@@ -58,7 +58,7 @@
 # 팀원 소개<a id="contributors"></a>
 - 모델
   + 배선화 : 이미지 전처리 & 데이터 수집
-  + 최진명 : 팀장, yolov8 학습 & 성능 개선
+  + 최진명 : 팀장, YOLOv8 학습 & 성능 개선, Flask 서버 관리
 - 웹
   + 김지오 : 드롭다운 박스 기능 구현
   + 장서현 : 소셜 로근인 기능 구현
@@ -186,7 +186,7 @@ SIGNOUT_REDIRECT_URI = "http://localhost:5000/logout"
   + `requirements.txt` : 서비스 이용에 필요한 python 패키지 리스트
 
 # 참고자료<a id="reference"></a>
-- yolov8 : https://github.com/ultralytics/ultralytics
+- YOLOv8 : https://github.com/ultralytics/ultralytics
 - yolo-flask : https://github.com/FaresElmenshawi/flask-yolov8-object-detection
 - 메일 전송 : https://github.com/AKLucifer666/Theft_Alert/tree/main
 - alert : https://github.com/NadavIs56/YOLOv8-Dog-Couch-RealTimeDetection
