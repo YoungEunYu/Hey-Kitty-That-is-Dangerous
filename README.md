@@ -51,7 +51,7 @@
 # 프로젝트 설명<a id="description"></a>
 학교와 직장으로 장시간 고양이를 홀로 두어야 하는 2030 1인 가구 집사들의 불안감 해소와 고양이를 위험으로부터 지켜주기 위해, 고양이가 위험물에 접근하면 경고음 재생, 알림, 위험 상황 캡처
 <div align = "center">
-<a href="https://youtu.be/MhMSjokOuik" title="Cat alert"><img src="https://youtu.be/MhMSjokOuik" alt="Cat alert" width="600px" align="center" /></a>
+<a href="https://youtu.be/MhMSjokOuik" title="Cat alert"><img src="https://github.com/jm83-database/Playdata-H.AI/blob/main/thumbnail.jpg" alt="Cat alert" width="600px" align="center" /></a>
 </div>
 
 
