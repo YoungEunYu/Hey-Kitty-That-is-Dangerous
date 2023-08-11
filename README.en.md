@@ -24,6 +24,7 @@
 - [Project Name](#project-name)
 - [Description](#description)
 - [Objective](#objective)
+- [Contributors](#contributors)
 - [Branch](#branch)
 - [Settings](#settings)
   - [Virtual Environment](#venv)
@@ -53,6 +54,8 @@ In order to relieve the anxiety of 2030 single-person household owners who have 
 # Objective<a id="objective"></a>
 1. User's free registration of dangerous objects
 2. When a cat approaches the dangerous object, it plays an alarm sound, send notifications, and capture the dangerous situation.
+
+# Contributors<a id="contributors"></a>
 
 # Branch<a id="branch"></a>
 - YOLO-FLASK : Execute YOLO in flask server
